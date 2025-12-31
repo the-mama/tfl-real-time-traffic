@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "lh_tfl_traffic"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "def94f4d-c031-8f0a-46d1-888a9c05095c"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "JsonSource",
+            "formatSettings": {
+              "type": "JsonReadSettings"
+            },
+            "storeSettings": {
+              "type": "HttpReadSettings",
+              "requestMethod": "GET"
+            },
+            "datasetSettings": {
+              "type": "Json",
+              "typeProperties": {
+                "location": {
+                  "type": "HttpServerLocation"
+                }
+              },
+              "schema": {},
+              "externalReferences": {
+                "connection": "f1b4a063-e8a5-49a6-bdf3-e62cb871b358"
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "JsonSink",
+            "formatSettings": {
+              "type": "JsonWriteSettings"
+            },
+            "storeSettings": {
+              "type": "LakehouseWriteSettings"
+            },
+            "datasetSettings": {
+              "type": "Json",
+              "typeProperties": {
+                "location": {
+                  "type": "LakehouseLocation",
+                  "folderPath": {
+                    "value": "@concat(\n  'traffic/tfl/bronze/incidents/',\n  'year=', formatDateTime(utcnow(),'yyyy'), '/',\n  'month=', formatDateTime(utcnow(),'MM'), '/',\n  'day=', formatDateTime(utcnow(),'dd'), '/',\n  'hour=', formatDateTime(utcnow(),'HH'), '/'\n)",
+                    "type": "Expression"
+                  },
+                  "fileName": {
+                    "value": "tfl_incidents_@{formatDateTime(utcnow(),'yyyyMMdd_HHmmss')}.json",
+                    "type": "Expression"
+                  }
+                }
+              },
+              "schema": {},
+              "linkedService": {
+                "name": "lh_tfl_traffic",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "def94f4d-c031-8f0a-46d1-888a9c05095c",
+                    "workspaceId": "00000000-0000-0000-0000-000000000000",
+                    "rootFolder": "Files"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "enableStaging": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Get_Incidents_Data",
+        "dependsOn": []
+      }
+    ],
+    "parameters": {
+      "app_key": {
+        "type": "string",
+        "defaultValue": "6c7a2a2a6a584924a21de32e81e899ad"
+      }
+    }
+  }
+}

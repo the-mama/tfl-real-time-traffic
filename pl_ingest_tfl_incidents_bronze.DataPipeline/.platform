@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "pl_ingest_tfl_incidents_bronze"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "585c2bee-31e1-99c6-41e5-050df4718ddf"
+  }
+}
