@@ -155,3 +155,34 @@ df_silver_deduped = (
 # META   "language": "sparksql",
 # META   "language_group": "synapse_pyspark"
 # META }
+
+# CELL ********************
+
+# MAGIC %%sql
+# MAGIC CREATE TABLE IF NOT EXISTS control.gold_watermarks (
+# MAGIC   job_name STRING,
+# MAGIC   last_processed_ts TIMESTAMP
+# MAGIC )
+# MAGIC USING DELTA;
+
+
+# METADATA ********************
+
+# META {
+# META   "language": "sparksql",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
+# MAGIC %%sql
+# MAGIC INSERT INTO control.gold_watermarks
+# MAGIC VALUES ('tfl_incidents_hourly', TIMESTAMP '1900-01-01');
+
+
+# METADATA ********************
+
+# META {
+# META   "language": "sparksql",
+# META   "language_group": "synapse_pyspark"
+# META }
