@@ -1,0 +1,106 @@
+table tfl_traffic_incidents
+	lineageTag: 20c54e2c-e9ed-4031-8ec8-31e353140bb5
+	sourceLineageTag: [dbo].[tfl_traffic_incidents]
+
+	column incident_id
+		dataType: string
+		lineageTag: 60294b6e-5e51-45c6-a888-29c7d6e0cd33
+		sourceLineageTag: incident_id
+		summarizeBy: none
+		sourceColumn: incident_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column category
+		dataType: string
+		lineageTag: dbe3ed5d-3349-4c0f-8b13-f6ca65483e5a
+		sourceLineageTag: category
+		summarizeBy: none
+		sourceColumn: category
+
+		annotation SummarizationSetBy = Automatic
+
+	column severity
+		dataType: string
+		lineageTag: 9e2d7e29-c50a-4619-b33e-c8611555eaed
+		sourceLineageTag: severity
+		summarizeBy: none
+		sourceColumn: severity
+
+		annotation SummarizationSetBy = Automatic
+
+	column start_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3ac0f556-85d9-4239-a044-3b85561b8fb8
+		sourceLineageTag: start_ts
+		summarizeBy: none
+		sourceColumn: start_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	column end_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a7983b74-522c-427b-bc2d-ef30eff23be5
+		sourceLineageTag: end_ts
+		summarizeBy: none
+		sourceColumn: end_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	column location
+		dataType: string
+		lineageTag: 4b6e3a45-1c2a-4792-adba-43e1e8ad7060
+		sourceLineageTag: location
+		summarizeBy: none
+		sourceColumn: location
+
+		annotation SummarizationSetBy = Automatic
+
+	column comments
+		dataType: string
+		lineageTag: 7f674438-fd96-42e5-9624-ff73d7e091a2
+		sourceLineageTag: comments
+		summarizeBy: none
+		sourceColumn: comments
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_modified_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8eead51b-ff96-4abd-a8f1-eb993bb392f1
+		sourceLineageTag: last_modified_ts
+		summarizeBy: none
+		sourceColumn: last_modified_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	column ingested_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 22cc0f24-23f5-475e-80c0-b1629db591bb
+		sourceLineageTag: ingested_ts
+		summarizeBy: none
+		sourceColumn: ingested_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	column dw_updated_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 652ae56b-42c6-441e-bbb5-7d610f502a80
+		sourceLineageTag: dw_updated_ts
+		summarizeBy: none
+		sourceColumn: dw_updated_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition tfl_traffic_incidents = entity
+		mode: directLake
+		source
+			entityName: tfl_traffic_incidents
+			schemaName: dbo
+			expressionSource: 'DirectLake - wh_tfl_traffic'
+

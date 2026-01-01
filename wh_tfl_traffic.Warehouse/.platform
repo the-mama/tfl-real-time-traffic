@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Warehouse",
+    "displayName": "wh_tfl_traffic"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f388ab0f-3b7a-af64-4a81-ec17f88776c1"
+  }
+}

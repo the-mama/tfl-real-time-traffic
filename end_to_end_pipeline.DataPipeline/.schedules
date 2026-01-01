@@ -6,8 +6,8 @@
       "jobType": "Execute",
       "configuration": {
         "type": "Cron",
-        "startDateTime": "2025-12-31T12:51:00",
-        "endDateTime": "2030-12-31T12:51:00",
+        "startDateTime": "2026-01-01T18:33:00",
+        "endDateTime": "2027-01-01T18:33:00",
         "localTimeZoneId": "GMT Standard Time",
         "interval": 5
       }

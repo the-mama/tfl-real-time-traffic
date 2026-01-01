@@ -1,0 +1,11 @@
+expression 'DirectLake - wh_tfl_traffic' =
+		let
+		    Source = AzureStorage.DataLake("https://onelake.dfs.fabric.microsoft.com/232ba7cc-995c-4e77-8728-30a3c165e464/f88776c1-ec17-4a81-af64-3b7af388ab0f", [HierarchicalNavigation=true])
+		in
+		    Source
+	lineageTag: 17b81d93-4219-4f27-9019-3bea488fbf00
+
+	annotation PBI_IncludeFutureArtifacts = False
+
+	annotation PBI_RemovedChildren = [{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[stg_tfl_traffic_incidents]"}},"objectType":"Table"}]
+
