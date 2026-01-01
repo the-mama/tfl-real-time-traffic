@@ -1,0 +1,60 @@
+{
+  "config": "{\"version\":\"5.69\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY25SU12\",\"type\":2,\"version\":{\"visual\":\"2.5.0\",\"report\":\"3.1.0\",\"page\":\"2.3.0\"}}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 1,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY25SU12",
+            "path": "BaseThemes/CY25SU12.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "d51a5871895377c57db8",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1d53102bc4dfb2d7ac04\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":474.51343836886,\"z\":1000,\"width\":1280,\"height\":245.56070435588506,\"tabOrder\":1000}},{\"id\":1,\"position\":{\"x\":0,\"y\":515,\"z\":1,\"width\":324,\"height\":180,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"hundredPercentStackedBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"tfl_traffic_incidents.severity\",\"active\":true}],\"Series\":[{\"queryRef\":\"tfl_traffic_incidents.category\"}],\"Y\":[{\"queryRef\":\"CountNonNull(tfl_traffic_incidents.incident_id)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"tfl_traffic_incidents\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"severity\"},\"Name\":\"tfl_traffic_incidents.severity\",\"NativeReferenceName\":\"severity\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"category\"},\"Name\":\"tfl_traffic_incidents.category\",\"NativeReferenceName\":\"category\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"incident_id\"}},\"Function\":5},\"Name\":\"CountNonNull(tfl_traffic_incidents.incident_id)\",\"NativeReferenceName\":\"incident_id\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"incident_id\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 245.56,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 474.51,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"2ad47ffb0a78a72d1527\",\"layouts\":[{\"id\":0,\"position\":{\"x\":640.593141797961,\"y\":143.54031510658015,\"z\":2000,\"width\":639.4068582020388,\"height\":291.8257645968489,\"tabOrder\":2000}},{\"id\":1,\"position\":{\"x\":0,\"y\":215,\"z\":2,\"width\":323.99999999999994,\"height\":291.8257645968489,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"tfl_traffic_incidents.incident_id\"},{\"queryRef\":\"tfl_traffic_incidents.category\"},{\"queryRef\":\"tfl_traffic_incidents.severity\"},{\"queryRef\":\"tfl_traffic_incidents.location\"},{\"queryRef\":\"tfl_traffic_incidents.start_ts\"},{\"queryRef\":\"tfl_traffic_incidents.end_ts\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"tfl_traffic_incidents\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"incident_id\"},\"Name\":\"tfl_traffic_incidents.incident_id\",\"NativeReferenceName\":\"incident_id\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"category\"},\"Name\":\"tfl_traffic_incidents.category\",\"NativeReferenceName\":\"category\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"severity\"},\"Name\":\"tfl_traffic_incidents.severity\",\"NativeReferenceName\":\"severity\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"location\"},\"Name\":\"tfl_traffic_incidents.location\",\"NativeReferenceName\":\"location\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"start_ts\"},\"Name\":\"tfl_traffic_incidents.start_ts\",\"NativeReferenceName\":\"start_ts\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"end_ts\"},\"Name\":\"tfl_traffic_incidents.end_ts\",\"NativeReferenceName\":\"end_ts\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"incident_id\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 291.83,
+          "width": 639.41,
+          "x": 640.59,
+          "y": 143.54,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"94e734656ef6a553e8f0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":143.54031510658015,\"z\":0,\"width\":640.593141797961,\"height\":291.8257645968489,\"tabOrder\":0}},{\"id\":1,\"position\":{\"x\":0,\"y\":26.855945121951216,\"z\":0,\"width\":324,\"height\":180.00000000000003,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"tfl_traffic_incidents.category\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(tfl_traffic_incidents.incident_id)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"tfl_traffic_incidents\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"category\"},\"Name\":\"tfl_traffic_incidents.category\",\"NativeReferenceName\":\"category\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"incident_id\"}},\"Function\":5},\"Name\":\"CountNonNull(tfl_traffic_incidents.incident_id)\",\"NativeReferenceName\":\"incident_id\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"incident_id\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 291.83,
+          "width": 640.59,
+          "x": 0.00,
+          "y": 143.54,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

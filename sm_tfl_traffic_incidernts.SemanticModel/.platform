@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "sm_tfl_traffic_incidernts"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "05b4f6e5-d8f1-9a9a-4556-61ff6340965a"
+  }
+}

@@ -165,3 +165,24 @@ GO
 -- META   "language": "sparksql",
 -- META   "language_group": "synapse_pyspark"
 -- META }
+
+-- CELL ********************
+
+SELECT TOP (100) [incident_id],
+			[category],
+			[severity],
+			[start_ts],
+			[end_ts],
+			[location],
+			[comments],
+			[last_modified_ts],
+			[ingested_ts],
+			[dw_updated_ts]
+FROM [wh_tfl_traffic].[dbo].[tfl_traffic_incidents]
+
+-- METADATA ********************
+
+-- META {
+-- META   "language": "sql",
+-- META   "language_group": "sqldatawarehouse"
+-- META }
