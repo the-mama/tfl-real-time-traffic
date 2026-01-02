@@ -157,7 +157,7 @@ WHEN NOT MATCHED THEN
         SYSUTCDATETIME()
     );
 GO
-
+--
 
 -- METADATA ********************
 
