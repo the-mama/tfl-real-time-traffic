@@ -48,4 +48,4 @@ A lightweight, production-style pipeline demonstrating:
 
 * API ingestion and incremental refresh patterns
 * Medallion architecture in Fabric (Bronze/Silver) + Warehouse serving layer
-* Reliable orchestration and upsert strategy for near-real-time analytics
+* Reliable orchestration and upsert strategy for near-real-time analytics.
