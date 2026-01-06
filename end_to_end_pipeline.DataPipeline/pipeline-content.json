@@ -118,7 +118,7 @@
           "secureInput": false,
           "secureOutput": false
         },
-        "name": "Load_to_WH_Table",
+        "name": "Load_to_WH_Tbl",
         "dependsOn": [
           {
             "activity": "toStg_Table",
